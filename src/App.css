@@ -1,0 +1,72 @@
+body {
+  font-family: "Scope One", serif;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 0;
+  padding-right: 0;
+  /* The image used */
+  background-image: linear-gradient(rgb(0, 0, 0), #000000);
+  height: 100vh;
+}
+
+.movieList {
+  margin: 40px;
+  padding: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 450px;
+
+}
+
+.container {
+  width: 100%;
+  justify-content: center;
+}
+.movieListCard{
+  border-radius: 20px;
+  margin: 20px;
+  height: 400px;
+}
+
+.info-title-movies{
+  background-color: rgba(28, 27, 27, 0.666);
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.info-title-moviecard{
+  margin-top: 20px;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.text-carousel{
+height: 100%;
+}
+.info-title-movies > h2 {
+  font-size: 50px;
+
+}
+
+.inside-cards{
+  margin-top: .5rem;
+}
+
+.pagination{
+  margin-top: 20px;
+align-content: center;
+color: white;
+margin-left: 40%;
+font-weight: 800;
+
+}
+ 
+
