@@ -8,12 +8,12 @@ import Pagination from "react-js-pagination";
 
 
 const apikey = process.env.REACT_APP_APIKEY
-let imageListTemp = []
+
 
 function App() {
   const [movieList, setMovieList] = useState(null)
   const [originalList, setOriginalList] = useState(null)
-  const [imageList, setImageList] = useState([1])
+  const [imageListTemp, setImageList] = useState([1])
   const [activePage, setActivePage] = useState(1);
   // const [popularMovies, setPopularMovies] = useState([])
 
@@ -22,6 +22,7 @@ function App() {
     setActivePage(pageNum);
   };
 
+ 
   
   const callMovie = async (page) => {
     let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=${page}`;
