@@ -33,7 +33,7 @@ export default function MovieNavbar({originalList, setMovieList}) {
     return (
      <div>
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">MoviePedia</Navbar.Brand>
+                <Navbar.Brand href="#home">Movie</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#features">Movies</Nav.Link>
@@ -41,7 +41,7 @@ export default function MovieNavbar({originalList, setMovieList}) {
                 </Nav>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 {genreList && genreList.map(genre => <NavDropdown.Item onSelect={handleSelect} eventKey={genre.id} key={genre.id} href="#action/3.1">{genre.name}</NavDropdown.Item>)}
-          
+              {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item> */}
             </NavDropdown>
                 <Form inline>
             <FormControl

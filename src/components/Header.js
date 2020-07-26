@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'react-bootstrap'
 import 'mdbreact/dist/css/mdb.css';
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBMask, MDBView} from "mdbreact";
 
 const apikey = process.env.REACT_APP_APIKEY
 

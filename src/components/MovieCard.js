@@ -2,14 +2,14 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card } from "react-bootstrap";
 import 'mdbreact/dist/css/mdb.css';
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBMask, MDBView, MDBCol } from "mdbreact";
 
 
 export default function MovieCards(props) {
     // console.log('MoviveCard.props:', props)
     let item = props.movie
     let MovieImage = "https://image.tmdb.org/t/p/w220_and_h330_face/" + item.poster_path
-    let pushImage = props.getImage(MovieImage)
+    
     return (
 
 
