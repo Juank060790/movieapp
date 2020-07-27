@@ -70,10 +70,8 @@ export default function MovieCards(props) {
                     <div className="row">
                         <div className="col-sm-12 video-area">
                             
-                            <iframe width="800" height="600" src={urlSrc}
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>Trailer</iframe>
+                      
+                                <iframe width="800" height="600" title="video" class="embed-responsive-item" src={urlSrc} allowfullscreen> </iframe>
                         </div>
                     </div>
                 </Modal>
