@@ -3,7 +3,6 @@ import MovieCard from './MovieCard'
 
 export default function MovieBoard({movieList}) {
     const getImage = (img) => {
-        console.log('MovieBoard.getImage.img:',img)
       }
       
     return (

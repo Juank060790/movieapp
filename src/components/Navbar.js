@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown } from 'react-bootstrap'
 
-const apikey = process.env.REACT_APP_APIKEY
-export default function MovieNavbar({ originalList, setMovieList }) {
-  const [genreList, setGenreList] = useState(null)
-  const [currentGenre, setCurrentGenre] = useState(null) // eslint-disable-next-line
+
+export default function MovieNavbar({ genreList, originalList, setMovieList ,searchByTopRated, handleSelect, setGenreList}) {
+  
   const searchByKeyword = (e) => {
     let filteredList = originalList.filter((movie) =>
       movie.title.includes(e.target.value)
@@ -13,23 +12,6 @@ export default function MovieNavbar({ originalList, setMovieList }) {
     setMovieList(filteredList);
   };
 
-  const getGenreList = async () => {
-    let url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apikey}&language=en-US`;
-    let result = await fetch(url)
-    let data = await result.json()
-    console.log('genre', data.genres)
-    setGenreList(data.genres);
-  }
-
-  useEffect(() => {
-    getGenreList()// eslint-disable-next-line
-  }, [])
-
-
-  const handleSelect = (e) => {
-    console.log("dropdown value", e)
-    setCurrentGenre(e)
-  }
   return (
     <div>
       <Navbar bg="dark" variant="dark">
@@ -39,8 +21,9 @@ export default function MovieNavbar({ originalList, setMovieList }) {
           <Nav.Link href="#features">Movies</Nav.Link>
           <Nav.Link href="#pricing">More Info</Nav.Link>
         </Nav>
+        <Button  onClick={() => searchByTopRated()} variant="warning">TopRated</Button>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-          {genreList && genreList.map(genre => <NavDropdown.Item onSelect={handleSelect} eventKey={genre.id} key={genre.id} href="#action/3.1">{genre.name}</NavDropdown.Item>)}
+          {genreList && genreList.map(genre => <NavDropdown.Item onSelect={(e)=>handleSelect(e)} eventKey={genre.id} key={genre.id} href="#action/3.1">{genre.name}</NavDropdown.Item>)}
         </NavDropdown>
         <Form inline>
           <FormControl
