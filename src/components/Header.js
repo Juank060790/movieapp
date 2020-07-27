@@ -45,6 +45,7 @@ export default function CoverSection(props) {
   
     };
 
+    
 
   return (
 
