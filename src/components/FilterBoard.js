@@ -23,7 +23,7 @@ export default function FilterBoard({
 
             <Dropdown style={{ margin: "40px" }}>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Dropdown Button
+                    Filtered Movies
            
                 <Dropdown.Menu>
                     <Dropdown.Item
