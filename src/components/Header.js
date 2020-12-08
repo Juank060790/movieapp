@@ -108,7 +108,6 @@ export default function CoverSection(props) {
            
           </Carousel.Item>
       </Carousel>
-  );
     </div>
   )
 }

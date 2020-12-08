@@ -69,3 +69,21 @@ border: .5px solid white;
 border-radius: 10px;
 }
  
+.movieboardAndPagination{
+  display: flex;
+  justify-content: center;
+}
+
+.paginationAndFilter{
+
+}
+
+
+@media (max-width: 800px) {
+  .movieboardAndPagination{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  
+}
