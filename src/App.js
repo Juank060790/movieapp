@@ -56,6 +56,7 @@ function App() {
 
   useEffect(() => {
     getGenreList();
+    // eslint-disable-next-line
   }, []);
 
   // Get cover img slide

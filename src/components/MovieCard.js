@@ -27,7 +27,6 @@ export default function MovieCards(props) {
     let url = `https://api.themoviedb.org/3/movie/${props.movie.id}?api_key=${apikey}&language=en-US&append_to_response=videos`;
     let response = await fetch(url);
     let data = await response.json();
-    console.log("data video link", data);
     setUrlSrc(fullUrl);
     if (data.videos.results.length > 0) {
       setYoutubeLink(
