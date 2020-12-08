@@ -21,7 +21,6 @@ export default function CoverSection(props) {
   }
 
   useEffect(()=> {
-    console.log('effeeeect')
     callPopularMovies()
   }, [])
   if (popularMovies.length === 0) {

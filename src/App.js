@@ -30,12 +30,10 @@ function App() {
     let result = await fetch(url);
     let data = await result.json();
     setGenreList(data.genres);
-    console.log("genre", data.genres);
     callMovie();
   };
 
   const handleSelect = async (e) => {
-    console.log("dropdown value", e);
     let url = `https://api.themoviedb.org/3/discover/movie?api_key=${apikey}&language=en-US&with_genres=${e}`;
     console.log(url);
     let result = await fetch(url);
